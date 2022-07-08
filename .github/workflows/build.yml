@@ -19,13 +19,13 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  cleanup-runs:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Stop other workflows executing
-      uses: rokroskar/workflow-run-cleanup-action@master
-      env:
-        GITHUB_TOKEN: "${{. secrets.GITHUB_TOKEN }}"
+#   cleanup-runs:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Stop other workflows executing
+#       uses: rokroskar/workflow-run-cleanup-action@master
+#       env:
+#         GITHUB_TOKEN: "${{. secrets.GITHUB_TOKEN }}"
 
   # This workflow contains a single job called "build"
   build:
@@ -40,27 +40,27 @@ jobs:
         with: 
           featch-depth: 0
           
-      - name: JDK Setup
-        uses: actions/setup-java@v1
-        with: 
-          java-version: 11
+#       - name: JDK Setup
+#         uses: actions/setup-java@v1
+#         with: 
+#           java-version: 11
       
-      - name: grant permission to gradlew
-        run: chmod +x gradlew
+#       - name: grant permission to gradlew
+#         run: chmod +x gradlew
         
-      - name: gradle Cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/dependency-check-data
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ hashFiles('build.gradle') }}
-          restore-keys: ${{ runner.os }}-gradle
+#       - name: gradle Cache
+#         uses: actions/cache@v2
+#         with:
+#           path: |
+#             ~/.gradle/caches
+#             ~/.gradle/dependency-check-data
+#             ~/.gradle/wrapper
+#           key: ${{ runner.os }}-gradle-${{ hashFiles('build.gradle') }}
+#           restore-keys: ${{ runner.os }}-gradle
           
-      - name: Gradle sonarqube execution
-        run: |
-          ./gradlew test dependencyCheckAnalyze sonarqube -i -s --profile \
+#       - name: Gradle sonarqube execution
+#         run: |
+#           ./gradlew test dependencyCheckAnalyze sonarqube -i -s --profile \
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
