@@ -10,16 +10,6 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 
 > Don't forget to set the `JDBC URL` value as `jdbc:h2:mem:testdb` for H2 UI.
 
-
-
-### Instructions
-
-- download the zip file of this project
-- create a repository in your own github named 'java-challenge'
-- clone your repository in a folder on your machine
-- extract the zip file in this folder
-- commit and push
-
 - Enhance the code in any ways you can see, you are free! Some possibilities:
   - Add tests
   - Change syntax
@@ -43,9 +33,9 @@ Application (with the embedded H2 database) is ready to be used ! You can access
 - Is the application running as expected
 - No performance issues
 
-#### Your experience in Java
+#### Experience in Java
 
-Please let us know more about your Java experience in a few sentences. For example:
+My Java experience in a few sentences. For example:
 
 - I have 4-5 years experience in Java and I used Spring Boot for about 2 years and in total 6 years of expereience.
 - I know little PHP, Wordpress, Python, Batch Programming and JAVA.
